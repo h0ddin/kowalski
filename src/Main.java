@@ -9,10 +9,13 @@ public class Main {
     private static final int ASCII_OFFSET = 96;
 
     public static void main(String[] args) throws ParseException {
-
-        int dayOfMonth = 2;
-        int monthOfYear = 11;
-        int year = 2020;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter day of month");
+        int dayOfMonth = in.nextInt();
+        System.out.println("Enter month");
+        int monthOfYear = in.nextInt();
+        System.out.println("Enter year");
+        int year = in.nextInt();
 
         String dayOfWeek = getDayOfWeek(dayOfMonth, monthOfYear, year);
 
@@ -51,7 +54,7 @@ public class Main {
                 .get();
 
         String selectedMedicine = medicineByFirstLetterNumber.get(medicineNumberClosest);
-        System.out.println("\nClosest value: " + medicineNumberClosest + " selected medicineByFirstLetterNumber for day: " + dayOfWeek + " is: " + selectedMedicine + "\n");
+        System.out.println("\nClosest value: " + medicineNumberClosest + " selected medicine for day: " + dayOfWeek + " is: " + selectedMedicine + "\n");
         return selectedMedicine;
     }
 
